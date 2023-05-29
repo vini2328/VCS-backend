@@ -34,7 +34,7 @@ class UserController{
        
                 } catch (error) {
                     console.log(error)
-                    res.send({"status":"failed", "message":"Unable to rgister"})
+                    res.send({"status":"failed", "message":"Unable to rgister","error":error})
 
                     
                 }
