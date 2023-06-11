@@ -128,7 +128,7 @@ class UserController {
         if (user) {
           const secret = user._id + process.env.JWT_SECRET_KEY;
 
-          const token = JWT.sign({ userID: user._id }, secret, {
+          const token = jwt.sign({ userID: user._id }, secret, {
             expiresIn: "15m",
           });
           const link = `http://localhost:3000/confirmpassword/${user._id}/${token}`;
@@ -179,7 +179,7 @@ class UserController {
     console.log("idddd", id, "tokennn", token);
 
     try {
-      JWT.verify(token, new_secret);
+      jwt.verify(token, new_secret);
       if (password && password_confirmation) {
         if (password !== password_confirmation) {
           res.send({
