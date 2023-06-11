@@ -1,6 +1,7 @@
 import UserModel from "../models/user.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import nodemailer from 'nodemailer'
 
 class UserController {
   static userRegistration = async (req, res) => {
