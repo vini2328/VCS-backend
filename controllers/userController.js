@@ -132,7 +132,7 @@ class UserController {
           const token = jwt.sign({ userID: user._id }, secret, {
             expiresIn: "15m",
           });
-          const link = `https://loquacious-swan-ca66ae.netlify.app/confirmpassword/${user._id}/${token}`;
+          const link = `https://648744b4a55d6e51c2123e05--sparkling-profiterole-495946.netlify.app/confirmpassword/${user._id}/${token}`;
           console.log(link);
 
           // send email
